@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project source="2.16.1.4.exe" version="1.0">
-  This file is intended to be loaded by Logisim http://logisim.altervista.org
-
-  <lib desc="#Wiring" name="0"/>
+This file is intended to be loaded by Logisim http://logisim.altervista.org
+<lib desc="#Wiring" name="0"/>
   <lib desc="#Gates" name="1"/>
   <lib desc="#TTL" name="2"/>
   <lib desc="#Plexers" name="3"/>
@@ -58,11 +57,12 @@
     <a name="clabelfont" val="Dialog plain 12"/>
     <a name="clabelcolor" val="#000000"/>
     <appear>
-      <rect fill="#ffffff" height="20" rx="5" ry="5" stroke="#000000" stroke-width="2" width="110" x="50" y="90"/>
-      <text font-family="Dialog" font-size="12" text-anchor="middle" x="105" y="103">Conversor 32:24</text>
-      <circ-port height="8" pin="330,690" width="8" x="46" y="96"/>
-      <circ-port height="10" pin="390,670" width="10" x="155" y="95"/>
-      <circ-anchor facing="east" height="6" width="6" x="157" y="97"/>
+      <rect fill="#ffffff" height="40" rx="5" ry="5" stroke="#000000" stroke-width="2" width="70" x="50" y="90"/>
+      <text font-family="Dialog" font-size="12" text-anchor="middle" x="88" y="103">Conversor</text>
+      <text font-family="Dialog" font-size="12" text-anchor="middle" x="85" y="123">32:24</text>
+      <circ-port height="8" pin="330,690" width="8" x="46" y="106"/>
+      <circ-port height="10" pin="390,670" width="10" x="115" y="105"/>
+      <circ-anchor facing="east" height="6" width="6" x="117" y="107"/>
     </appear>
     <wire from="(350,620)" to="(370,620)"/>
     <wire from="(350,630)" to="(370,630)"/>
@@ -104,11 +104,6 @@
       <a name="bit22" val="4"/>
       <a name="bit23" val="4"/>
     </comp>
-    <comp lib="0" loc="(330,690)" name="Pin">
-      <a name="width" val="32"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="Entrada"/>
-    </comp>
     <comp lib="0" loc="(330,690)" name="Splitter">
       <a name="fanout" val="7"/>
       <a name="incoming" val="32"/>
@@ -143,6 +138,11 @@
       <a name="bit29" val="6"/>
       <a name="bit30" val="6"/>
       <a name="bit31" val="6"/>
+    </comp>
+    <comp lib="0" loc="(330,690)" name="Pin">
+      <a name="width" val="32"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Entrada"/>
     </comp>
   </circuit>
 </project>
