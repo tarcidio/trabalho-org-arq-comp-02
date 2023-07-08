@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project source="2.16.1.4.exe" version="1.0">
-This file is intended to be loaded by Logisim http://logisim.altervista.org
-<lib desc="#Wiring" name="0"/>
+  This file is intended to be loaded by Logisim http://logisim.altervista.org
+
+  <lib desc="#Wiring" name="0"/>
   <lib desc="#Gates" name="1"/>
   <lib desc="#TTL" name="2"/>
   <lib desc="#Plexers" name="3">
@@ -33,13 +34,13 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
       <a name="valign" val="base"/>
     </tool>
   </lib>
-  <lib desc="file#bco_reg.circ" name="8"/>
-  <lib desc="file#ula.circ" name="9"/>
-  <lib desc="file#conversor_32_24.circ" name="10"/>
-  <lib desc="file#detector_tipos.circ" name="11"/>
-  <lib desc="file#imm_gen.circ" name="12"/>
-  <lib desc="file#uc.circ" name="13"/>
-  <lib desc="file#uc_ula.circ" name="14"/>
+  <lib desc="file#banco_de_resgitradores.circ" name="8"/>
+  <lib desc="file#unidade_logica_aritmetica.circ" name="9"/>
+  <lib desc="file#conversor_32_para_24.circ" name="10"/>
+  <lib desc="file#detector_tipo_instrucao.circ" name="11"/>
+  <lib desc="file#immediate_generator.circ" name="12"/>
+  <lib desc="file#unidade_controle.circ" name="13"/>
+  <lib desc="file#unidade_controle_ula.circ" name="14"/>
   <main name="main"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -389,135 +390,59 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
     <wire from="(860,270)" to="(940,270)"/>
     <wire from="(840,910)" to="(840,950)"/>
     <wire from="(840,970)" to="(840,1530)"/>
-    <comp lib="4" loc="(1060,1160)" name="Adder">
+    <comp lib="5" loc="(1200,790)" name="Register">
       <a name="width" val="32"/>
+      <a name="label" val="EX/MEM.ALUOutput"/>
     </comp>
     <comp lib="5" loc="(1570,840)" name="Register">
       <a name="width" val="32"/>
       <a name="label" val="MEM/WB.LMD"/>
     </comp>
-    <comp lib="5" loc="(1200,190)" name="Register">
-      <a name="width" val="1"/>
-      <a name="label" val="EX/MEM.Zero"/>
-    </comp>
-    <comp lib="5" loc="(970,1070)" name="Register">
-      <a name="width" val="32"/>
-      <a name="label" val="ID/EX.PC+4"/>
-    </comp>
-    <comp lib="5" loc="(1570,350)" name="Register">
-      <a name="width" val="1"/>
-      <a name="label" val="MEM/WB.MemToReg"/>
-    </comp>
-    <comp lib="8" loc="(770,840)" name="main"/>
-    <comp lib="5" loc="(970,510)" name="Register">
-      <a name="width" val="1"/>
-      <a name="label" val="ID/EX.RegWrite"/>
-    </comp>
-    <comp lib="5" loc="(970,860)" name="Register">
-      <a name="width" val="32"/>
-      <a name="label" val="ID/EX.B"/>
-    </comp>
     <comp lib="5" loc="(1200,1160)" name="Register">
       <a name="width" val="32"/>
       <a name="label" val="EX/MEM.PC+Imm"/>
     </comp>
-    <comp lib="10" loc="(1320,830)" name="main"/>
-    <comp lib="5" loc="(1570,190)" name="Register">
-      <a name="width" val="1"/>
-      <a name="label" val="MEM/WB.Zero"/>
-    </comp>
-    <comp lib="5" loc="(1200,430)" name="Register">
-      <a name="width" val="1"/>
-      <a name="label" val="EX/MEM.JalOrNot"/>
-    </comp>
-    <comp lib="5" loc="(1200,990)" name="Register">
-      <a name="width" val="5"/>
-      <a name="label" val="EX/MEM.rd"/>
-    </comp>
-    <comp lib="5" loc="(1570,1070)" name="Register">
-      <a name="width" val="32"/>
-      <a name="label" val="MEM/WB.PC+4"/>
-    </comp>
-    <comp lib="5" loc="(970,350)" name="Register">
-      <a name="width" val="1"/>
-      <a name="label" val="ID/EX.MemToReg"/>
-    </comp>
-    <comp lib="7" loc="(253,883)" name="Text">
-      <a name="text" val="Cada endereço da RAM armazena 4 bytes, logo para avançar,"/>
-      <a name="font" val="Dialog plain 12"/>
-    </comp>
-    <comp lib="5" loc="(1200,880)" name="Register">
-      <a name="width" val="32"/>
-      <a name="label" val="EX/MEM.B"/>
-    </comp>
-    <comp lib="5" loc="(520,980)" name="Register">
-      <a name="width" val="32"/>
-      <a name="label" val="IF/ID.IR"/>
-    </comp>
-    <comp lib="5" loc="(150,980)" name="Register">
-      <a name="width" val="32"/>
-      <a name="label" val="PC"/>
-    </comp>
-    <comp lib="5" loc="(970,990)" name="Register">
-      <a name="width" val="5"/>
-      <a name="label" val="ID/EX.rd"/>
-    </comp>
-    <comp lib="5" loc="(1200,790)" name="Register">
-      <a name="width" val="32"/>
-      <a name="label" val="EX/MEM.ALUOutput"/>
+    <comp lib="0" loc="(610,850)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="5"/>
+      <a name="incoming" val="5"/>
     </comp>
     <comp lib="5" loc="(970,1440)" name="Register">
       <a name="width" val="32"/>
       <a name="label" val="ID/EX.PC"/>
     </comp>
-    <comp lib="5" loc="(1570,590)" name="Register">
-      <a name="width" val="1"/>
-      <a name="label" val="MEM/WB.Branch"/>
-    </comp>
-    <comp lib="3" loc="(90,980)" name="Multiplexer">
-      <a name="selloc" val="tr"/>
+    <comp lib="5" loc="(520,1070)" name="Register">
       <a name="width" val="32"/>
-      <a name="enable" val="false"/>
+      <a name="label" val="IF/ID.PC + 4"/>
     </comp>
-    <comp lib="5" loc="(970,430)" name="Register">
-      <a name="width" val="1"/>
-      <a name="label" val="ID/EX.JalOrNot"/>
+    <comp lib="0" loc="(610,900)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="7"/>
+      <a name="incoming" val="7"/>
+    </comp>
+    <comp lib="5" loc="(970,990)" name="Register">
+      <a name="width" val="5"/>
+      <a name="label" val="ID/EX.rd"/>
+    </comp>
+    <comp lib="8" loc="(770,840)" name="main"/>
+    <comp lib="5" loc="(970,190)" name="Register">
+      <a name="width" val="2"/>
+      <a name="label" val="ID/EX.ALUControl"/>
+    </comp>
+    <comp lib="5" loc="(520,980)" name="Register">
+      <a name="width" val="32"/>
+      <a name="label" val="IF/ID.IR"/>
     </comp>
     <comp lib="5" loc="(1200,590)" name="Register">
       <a name="width" val="1"/>
       <a name="label" val="EX/MEM.Branch"/>
     </comp>
-    <comp lib="5" loc="(520,1070)" name="Register">
+    <comp lib="5" loc="(150,980)" name="Register">
       <a name="width" val="32"/>
-      <a name="label" val="IF/ID.PC + 4"/>
+      <a name="label" val="PC"/>
     </comp>
-    <comp lib="5" loc="(970,790)" name="Register">
-      <a name="width" val="32"/>
-      <a name="label" val="ID/EX.A"/>
-    </comp>
-    <comp lib="10" loc="(280,980)" name="main"/>
-    <comp lib="0" loc="(180,1080)" name="Constant">
-      <a name="width" val="32"/>
-      <a name="value" val="0x4"/>
-    </comp>
-    <comp lib="0" loc="(1370,750)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="MemWrite"/>
-    </comp>
-    <comp lib="12" loc="(750,1350)" name="main"/>
-    <comp lib="9" loc="(1110,840)" name="main"/>
-    <comp lib="5" loc="(1200,510)" name="Register">
-      <a name="width" val="1"/>
-      <a name="label" val="EX/MEM.RegWrite"/>
-    </comp>
-    <comp lib="5" loc="(1480,840)" name="RAM">
-      <a name="addrWidth" val="24"/>
-      <a name="dataWidth" val="32"/>
-      <a name="label" val="Memória de Dados"/>
-      <a name="bus" val="separate"/>
-      <a name="simpleMode" val="false"/>
-    </comp>
-    <comp lib="3" loc="(1640,830)" name="Multiplexer">
+    <comp lib="13" loc="(640,590)" name="main"/>
+    <comp lib="3" loc="(90,980)" name="Multiplexer">
       <a name="selloc" val="tr"/>
       <a name="width" val="32"/>
       <a name="enable" val="false"/>
@@ -526,147 +451,223 @@ This file is intended to be loaded by Logisim http://logisim.altervista.org
       <a name="width" val="5"/>
       <a name="label" val="MEM/WB.rd"/>
     </comp>
-    <comp lib="5" loc="(1570,760)" name="Register">
+    <comp lib="5" loc="(1570,1160)" name="Register">
       <a name="width" val="32"/>
-      <a name="label" val="MEM/WB.ALUOutput"/>
+      <a name="label" val="MEM/WB.PC+Imm"/>
     </comp>
-    <comp lib="5" loc="(970,190)" name="Register">
-      <a name="width" val="2"/>
-      <a name="label" val="ID/EX.ALUControl"/>
+    <comp lib="7" loc="(253,883)" name="Text">
+      <a name="text" val="Cada endereço da RAM armazena 4 bytes, logo para avançar,"/>
+      <a name="font" val="Dialog plain 12"/>
     </comp>
-    <comp lib="5" loc="(1570,510)" name="Register">
+    <comp lib="5" loc="(1570,590)" name="Register">
       <a name="width" val="1"/>
-      <a name="label" val="MEM/WB.RegWrite"/>
-    </comp>
-    <comp lib="0" loc="(400,1020)" name="Constant">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="7" loc="(253,902)" name="Text">
-      <a name="text" val="em teoria, deveria somar 1 para PC, mas vamos manter PC + 4"/>
-      <a name="font" val="Dialog plain 12"/>
-    </comp>
-    <comp lib="7" loc="(149,923)" name="Text">
-      <a name="text" val="para manter a realidade"/>
-      <a name="font" val="Dialog plain 12"/>
+      <a name="label" val="MEM/WB.Branch"/>
     </comp>
     <comp lib="5" loc="(970,1350)" name="Register">
       <a name="width" val="32"/>
       <a name="label" val="ID/EX.Imm"/>
     </comp>
-    <comp lib="0" loc="(570,980)" name="Splitter">
-      <a name="fanout" val="32"/>
-      <a name="incoming" val="32"/>
-    </comp>
-    <comp lib="1" loc="(1660,70)" name="OR Gate">
+    <comp lib="0" loc="(400,1020)" name="Constant">
       <a name="facing" val="north"/>
     </comp>
-    <comp lib="5" loc="(970,1190)" name="Register">
-      <a name="width" val="3"/>
-      <a name="label" val="ID/EX.f3"/>
-    </comp>
-    <comp lib="5" loc="(1570,1160)" name="Register">
-      <a name="width" val="32"/>
-      <a name="label" val="MEM/WB.PC+Imm"/>
-    </comp>
-    <comp lib="0" loc="(610,900)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="7"/>
-      <a name="incoming" val="7"/>
-    </comp>
-    <comp lib="14" loc="(1100,1090)" name="main"/>
-    <comp lib="0" loc="(610,650)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="7"/>
-      <a name="incoming" val="7"/>
-    </comp>
-    <comp lib="3" loc="(1690,840)" name="Multiplexer">
-      <a name="selloc" val="tr"/>
-      <a name="width" val="32"/>
-      <a name="enable" val="false"/>
-    </comp>
-    <comp lib="0" loc="(1370,950)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="MemWrite"/>
-    </comp>
-    <comp lib="0" loc="(610,800)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="5"/>
-      <a name="incoming" val="5"/>
-    </comp>
-    <comp lib="6" loc="(40,1520)" name="DipSwitch">
-      <a name="NSwitches" val="1"/>
-    </comp>
-    <comp lib="5" loc="(1200,350)" name="Register">
+    <comp lib="5" loc="(1570,190)" name="Register">
       <a name="width" val="1"/>
-      <a name="label" val="EX/MEM.MemToReg"/>
-    </comp>
-    <comp lib="5" loc="(970,110)" name="Register">
-      <a name="width" val="1"/>
-      <a name="label" val="ID/EX.ALUSrc"/>
-    </comp>
-    <comp lib="5" loc="(450,980)" name="RAM">
-      <a name="addrWidth" val="24"/>
-      <a name="dataWidth" val="32"/>
-      <a name="label" val="Memória de Instrução"/>
-      <a name="bus" val="asynch"/>
-    </comp>
-    <comp lib="5" loc="(1570,430)" name="Register">
-      <a name="width" val="1"/>
-      <a name="label" val="MEM/WB.JalOrNot"/>
-    </comp>
-    <comp lib="5" loc="(520,1440)" name="Register">
-      <a name="width" val="32"/>
-      <a name="label" val="IF/ID.PC"/>
-    </comp>
-    <comp lib="5" loc="(1200,270)" name="Register">
-      <a name="width" val="1"/>
-      <a name="label" val="EX/MEM.MemWrite"/>
-    </comp>
-    <comp lib="5" loc="(970,1270)" name="Register">
-      <a name="width" val="7"/>
-      <a name="label" val="ID/EX.f7"/>
-    </comp>
-    <comp lib="5" loc="(1200,1070)" name="Register">
-      <a name="width" val="32"/>
-      <a name="label" val="EX/MEM.PC+4"/>
-    </comp>
-    <comp lib="5" loc="(970,270)" name="Register">
-      <a name="width" val="1"/>
-      <a name="label" val="ID/EX.MemWrite"/>
-    </comp>
-    <comp lib="0" loc="(610,720)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="5"/>
-      <a name="incoming" val="5"/>
-    </comp>
-    <comp lib="1" loc="(840,950)" name="NOT Gate">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="4" loc="(230,1070)" name="Adder">
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="13" loc="(640,590)" name="main"/>
-    <comp lib="0" loc="(610,770)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="3"/>
-      <a name="incoming" val="3"/>
-    </comp>
-    <comp lib="0" loc="(610,850)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="5"/>
-      <a name="incoming" val="5"/>
+      <a name="label" val="MEM/WB.Zero"/>
     </comp>
     <comp lib="3" loc="(1060,870)" name="Multiplexer">
       <a name="selloc" val="tr"/>
       <a name="width" val="32"/>
       <a name="enable" val="false"/>
     </comp>
-    <comp lib="1" loc="(1630,120)" name="AND Gate">
+    <comp lib="5" loc="(970,1070)" name="Register">
+      <a name="width" val="32"/>
+      <a name="label" val="ID/EX.PC+4"/>
+    </comp>
+    <comp lib="9" loc="(1110,840)" name="main"/>
+    <comp lib="5" loc="(1570,350)" name="Register">
+      <a name="width" val="1"/>
+      <a name="label" val="MEM/WB.MemToReg"/>
+    </comp>
+    <comp lib="3" loc="(1690,840)" name="Multiplexer">
+      <a name="selloc" val="tr"/>
+      <a name="width" val="32"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="10" loc="(1320,830)" name="main"/>
+    <comp lib="1" loc="(840,950)" name="NOT Gate">
       <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(970,1190)" name="Register">
+      <a name="width" val="3"/>
+      <a name="label" val="ID/EX.f3"/>
+    </comp>
+    <comp lib="5" loc="(970,270)" name="Register">
+      <a name="width" val="1"/>
+      <a name="label" val="ID/EX.MemWrite"/>
+    </comp>
+    <comp lib="0" loc="(1370,750)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="MemWrite"/>
+    </comp>
+    <comp lib="5" loc="(970,430)" name="Register">
+      <a name="width" val="1"/>
+      <a name="label" val="ID/EX.JalOrNot"/>
+    </comp>
+    <comp lib="5" loc="(970,350)" name="Register">
+      <a name="width" val="1"/>
+      <a name="label" val="ID/EX.MemToReg"/>
+    </comp>
+    <comp lib="0" loc="(610,720)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="5"/>
+      <a name="incoming" val="5"/>
+    </comp>
+    <comp lib="7" loc="(149,923)" name="Text">
+      <a name="text" val="para manter a realidade"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="5" loc="(1200,880)" name="Register">
+      <a name="width" val="32"/>
+      <a name="label" val="EX/MEM.B"/>
+    </comp>
+    <comp lib="5" loc="(1570,430)" name="Register">
+      <a name="width" val="1"/>
+      <a name="label" val="MEM/WB.JalOrNot"/>
+    </comp>
+    <comp lib="0" loc="(610,770)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="3"/>
+    </comp>
+    <comp lib="5" loc="(970,860)" name="Register">
+      <a name="width" val="32"/>
+      <a name="label" val="ID/EX.B"/>
     </comp>
     <comp lib="5" loc="(970,590)" name="Register">
       <a name="width" val="1"/>
       <a name="label" val="ID/EX.Branch"/>
+    </comp>
+    <comp lib="10" loc="(280,980)" name="main"/>
+    <comp lib="5" loc="(450,980)" name="RAM">
+      <a name="addrWidth" val="24"/>
+      <a name="dataWidth" val="32"/>
+      <a name="label" val="Memória de Instrução"/>
+      <a name="bus" val="asynch"/>
+    </comp>
+    <comp lib="5" loc="(970,790)" name="Register">
+      <a name="width" val="32"/>
+      <a name="label" val="ID/EX.A"/>
+    </comp>
+    <comp lib="5" loc="(1200,990)" name="Register">
+      <a name="width" val="5"/>
+      <a name="label" val="EX/MEM.rd"/>
+    </comp>
+    <comp lib="1" loc="(1660,70)" name="OR Gate">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(610,800)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="5"/>
+      <a name="incoming" val="5"/>
+    </comp>
+    <comp lib="5" loc="(1570,760)" name="Register">
+      <a name="width" val="32"/>
+      <a name="label" val="MEM/WB.ALUOutput"/>
+    </comp>
+    <comp lib="5" loc="(1200,350)" name="Register">
+      <a name="width" val="1"/>
+      <a name="label" val="EX/MEM.MemToReg"/>
+    </comp>
+    <comp lib="5" loc="(1200,1070)" name="Register">
+      <a name="width" val="32"/>
+      <a name="label" val="EX/MEM.PC+4"/>
+    </comp>
+    <comp lib="5" loc="(970,1270)" name="Register">
+      <a name="width" val="7"/>
+      <a name="label" val="ID/EX.f7"/>
+    </comp>
+    <comp lib="4" loc="(1060,1160)" name="Adder">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="5" loc="(1570,510)" name="Register">
+      <a name="width" val="1"/>
+      <a name="label" val="MEM/WB.RegWrite"/>
+    </comp>
+    <comp lib="5" loc="(1480,840)" name="RAM">
+      <a name="addrWidth" val="24"/>
+      <a name="dataWidth" val="32"/>
+      <a name="label" val="Memória de Dados"/>
+      <a name="bus" val="separate"/>
+      <a name="simpleMode" val="false"/>
+    </comp>
+    <comp lib="5" loc="(970,110)" name="Register">
+      <a name="width" val="1"/>
+      <a name="label" val="ID/EX.ALUSrc"/>
+    </comp>
+    <comp lib="0" loc="(610,650)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="7"/>
+      <a name="incoming" val="7"/>
+    </comp>
+    <comp lib="5" loc="(970,510)" name="Register">
+      <a name="width" val="1"/>
+      <a name="label" val="ID/EX.RegWrite"/>
+    </comp>
+    <comp lib="5" loc="(1200,510)" name="Register">
+      <a name="width" val="1"/>
+      <a name="label" val="EX/MEM.RegWrite"/>
+    </comp>
+    <comp lib="5" loc="(1570,1070)" name="Register">
+      <a name="width" val="32"/>
+      <a name="label" val="MEM/WB.PC+4"/>
+    </comp>
+    <comp lib="7" loc="(253,902)" name="Text">
+      <a name="text" val="em teoria, deveria somar 1 para PC, mas vamos manter PC + 4"/>
+      <a name="font" val="Dialog plain 12"/>
+    </comp>
+    <comp lib="1" loc="(1630,120)" name="AND Gate">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(570,980)" name="Splitter">
+      <a name="fanout" val="32"/>
+      <a name="incoming" val="32"/>
+    </comp>
+    <comp lib="5" loc="(1200,430)" name="Register">
+      <a name="width" val="1"/>
+      <a name="label" val="EX/MEM.JalOrNot"/>
+    </comp>
+    <comp lib="12" loc="(750,1350)" name="main"/>
+    <comp lib="5" loc="(520,1440)" name="Register">
+      <a name="width" val="32"/>
+      <a name="label" val="IF/ID.PC"/>
+    </comp>
+    <comp lib="3" loc="(1640,830)" name="Multiplexer">
+      <a name="selloc" val="tr"/>
+      <a name="width" val="32"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="6" loc="(40,1520)" name="DipSwitch">
+      <a name="NSwitches" val="1"/>
+    </comp>
+    <comp lib="4" loc="(230,1070)" name="Adder">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="14" loc="(1100,1090)" name="main"/>
+    <comp lib="5" loc="(1200,190)" name="Register">
+      <a name="width" val="1"/>
+      <a name="label" val="EX/MEM.Zero"/>
+    </comp>
+    <comp lib="5" loc="(1200,270)" name="Register">
+      <a name="width" val="1"/>
+      <a name="label" val="EX/MEM.MemWrite"/>
+    </comp>
+    <comp lib="0" loc="(180,1080)" name="Constant">
+      <a name="width" val="32"/>
+      <a name="value" val="0x4"/>
+    </comp>
+    <comp lib="0" loc="(1370,950)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="MemWrite"/>
     </comp>
   </circuit>
 </project>
