@@ -31,6 +31,7 @@ Também foi usado como base o livro "GUIA PRÁTICO RISC-V: ATLAS DE UMA ARQUITET
     
 ## Discussão e resultados
 
+### Vídeos:
 Para facilitar a discussão de todo o trabalho, fizemos vídeos que descrevem melhor os componentes e a implementação. Segue:
 
 * [Vídeo 01: Introdução ao Logisim](https://www.youtube.com/watch?v=ZZsND2eOAwo)
@@ -38,6 +39,7 @@ Para facilitar a discussão de todo o trabalho, fizemos vídeos que descrevem me
 * [Vídeo 03: Explicação da implementação](https://www.youtube.com/watch?v=ZJE4mW0OjPg)
 * [Vídeo 04: Desafios](https://www.youtube.com/watch?v=-ZBtMzy1AJU)
 
+### Subcircuitos:
 Neste trabalho, implementamos os seguintes subcircuitos:
 * banco_de_registradores.circ: circuito que representa o conjunto de registradores do processador;
 * conversor_32_23.circ: como a memória RAM do Logisim é endereçada com, no máximo, 24 bits, não podemos utilizar os 32 bits da arquitetura. Para converter, modularizamos um pequeno circuito que captura os 24 bits menos significativos;
@@ -49,13 +51,15 @@ Neste trabalho, implementamos os seguintes subcircuitos:
 * monociclo.circ: primeiro componente principal. Para construir a pipeline, fizemos a monociclo primeiro;
 * pipeline.circ: componente principal o qual é o objetivo do trabalho.
 
+### Instruções:
 Implementamos as seguintes instruções:
 * Tipo R: add
 * Tipo I: lw
 * Tipo S: sw
 * Tipo B: beq
 * Tipo J: jal
-  
+
+### Código:
 O código que está no "MEMORIA_INSTRUCOES" é:
 
 `0x00: lw t0, 4(zero)`
@@ -80,13 +84,15 @@ O código que está no "MEMORIA_INSTRUCOES" é:
 
 Veja melhor no arquivo "[instrucoes.txt](https://github.com/tarcidio/trabalho-org-arq-comp-02/blob/main/instrucoes.txt)".
 
+### Funcionamento:
+
 [GIF]
 
 ## Desafios
   Dentre os desafios enfrentados, podemos citar:
   1. Fazer subcircuitos que não sabiamos como funcionava de fato. O principal exemplo foi o banco de registradores;
   2. Manipular os fios de forma que todo o circuito fosse o mais didático possível;
-  3. Sincronizar o clock para que resolvesse o problema da dependencia estrutural
+  3. Sincronizar o clock para que resolvesse o problema da dependência estrutural
 
 ## Pontos de melhoria para os próximos alunos
 
@@ -96,7 +102,7 @@ Veja melhor no arquivo "[instrucoes.txt](https://github.com/tarcidio/trabalho-or
 
 ## Quer nos ajudar?
 
-Se encontrar erros neste projeto, por favor, faça um pull ou nos chame para conversar! Adoraríamos melhorar este trabalho para os próximos alunos. Se implementar uma melhoria (instruções, forwarding, cache, dentre outras), avise nos! Anexaremos o link do seu trabalho neste git hub.
+Se encontrar erros neste projeto, por favor, faça um pull ou nos chame para conversar! Adoraríamos melhorar este trabalho para os próximos alunos. Se implementar uma melhoria (instruções, forwarding, cache, dentre outras), avise-nos! Anexaremos o link do seu trabalho neste git hub.
 
 
 Vamos melhorar o aprendizado desta disciplina ;)
