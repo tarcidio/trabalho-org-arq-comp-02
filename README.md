@@ -26,7 +26,7 @@ Foi utilizado o simulador Logisim-ITA, uma ferramenta gratuita de simulação de
  3. Clique em "DOWNLOAD"
  4. Em segundos, o arquivo .exe do Logsim será baixado
  5. Vá até a pasta de "Downloads" e abra o arquivo baixado
-    Também foi usado como base o livro "GUIA PRÁTICO RISC-V: ATLAS DE UMA ARQUITETURA ABERTA": livro abrangente que explora a arquitetura RISC-V de forma prática. Ele apresenta os conceitos fundamentais e a implementação dessa arquitetura de processador aberta. Exploramos principalmente a página 17 e 18, onde consta as instruções.
+    Também foi usado como base o livro "GUIA PRÁTICO RISC-V: ATLAS DE UMA ARQUITETURA ABERTA": livro abrangente que explora a arquitetura RISC-V de forma prática. Ele apresenta os conceitos fundamentais e a implementação dessa arquitetura de processador aberta. Exploramos principalmente a [página 17 e 18](https://github.com/tarcidio/trabalho-org-arq-comp-02/blob/main/instrucoes_risc_v.pdf), onde consta as instruções.
     
 ## Discussão e resultados
 
@@ -60,6 +60,18 @@ Implementação as seguintes instruções:
   
 O código que está no "MEMORIA_INSTRUCOES" é:
 
+0x00: lw t0, 4(zero)
+0x04: lw t1, 8(zero)
+0x08: add zero, zero, zero
+0x12: add zero, zero, zero
+0x16: add t2, t1, t0
+0x20: add zero, zero, zero
+0x24: add zero, zero, zero
+0x28: sw t2, 16(sp)
+0x32: beq t3, zero, 40
+0x68: j  ra, -0x68 (111111111111110011000)
+
+Veja melhora no arquivo "[instrucoes.txt](https://github.com/tarcidio/trabalho-org-arq-comp-02/blob/main/instrucoes.txt)".
 
 [GIF]
 
