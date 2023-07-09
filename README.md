@@ -2,7 +2,7 @@
 
 ## Autores:
 
-* Tarcídio Antônio Júnior - 10748347
+* Tarcídio Antônio Júnior - 10748347 (tarcidio.antonio2@gmail.com)
 * Jade Bortot de Paiva - 11372883
 * Gabriel Barbosa de Oliveira - 12543415
 * Luís Filipe Vasconcelos Peres - 10310641
