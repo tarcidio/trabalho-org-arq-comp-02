@@ -59,17 +59,26 @@ Implementamos as seguintes instruções:
 O código que está no "MEMORIA_INSTRUCOES" é:
 
 0x00: lw t0, 4(zero)
+
 0x04: lw t1, 8(zero)
+
 0x08: add zero, zero, zero
+
 0x12: add zero, zero, zero
+
 0x16: add t2, t1, t0
+
 0x20: add zero, zero, zero
+
 0x24: add zero, zero, zero
+
 0x28: sw t2, 16(sp)
+
 0x32: beq t3, zero, 40
+
 0x68: j  ra, -0x68 (111111111111110011000)
 
-Veja melhora no arquivo "[instrucoes.txt](https://github.com/tarcidio/trabalho-org-arq-comp-02/blob/main/instrucoes.txt)".
+Veja melhor no arquivo "[instrucoes.txt](https://github.com/tarcidio/trabalho-org-arq-comp-02/blob/main/instrucoes.txt)".
 
 [GIF]
 
