@@ -13,7 +13,7 @@
 
 ## Objetivo do trabalho
   
-O objetivo deste trabalho é implementar e simular um processador RISC-V em pipeline usando o Logisim. A técnica de pipeline é empregada para otimizar o desempenho do processador, dividindo as instruções em estágios e executando-os simultaneamente. Compreender o funcionamento do pipeline e seus componentes básicos é fundamental para compreender a arquitetura de um computador.
+O objetivo deste trabalho é implementar e simular um processador x32 RISC-V em pipeline usando o Logisim. A técnica de pipeline é empregada para otimizar o desempenho do processador, dividindo as instruções em estágios e executando-os simultaneamente. Compreender o funcionamento do pipeline e seus componentes básicos é fundamental para compreender a arquitetura de um computador.
 
 Além da implementação, serão realizados testes utilizando instruções básicas para verificar a funcionalidade do processador simulado. O trabalho também busca ser um recurso educativo, fornecendo material para os futuros alunos da disciplina de Organização e Arquitetura de Computadores.
   
@@ -32,26 +32,23 @@ Foi utilizado o simulador Logisim-ITA, uma ferramenta gratuita de simulação de
 
 Para facilitar a discussão de todo o trabalho, fizemos vídeos que descrevem melhor os componentes e a implementação. Segue:
 
-[Vídeo 01: Introdução ao Logisim](https://www.youtube.com/watch?v=ZZsND2eOAwo)
-
-[Vídeo 02: Subcircuitos usados](https://www.youtube.com/watch?v=1rVrc5WXauU)
-
-[Vídeo 03: Explicação da implementação](https://www.youtube.com/watch?v=ZJE4mW0OjPg)
-
-[Vídeo 04: Desafios](https://www.youtube.com/watch?v=-ZBtMzy1AJU)
+* [Vídeo 01: Introdução ao Logisim](https://www.youtube.com/watch?v=ZZsND2eOAwo)
+* [Vídeo 02: Subcircuitos usados](https://www.youtube.com/watch?v=1rVrc5WXauU)
+* [Vídeo 03: Explicação da implementação](https://www.youtube.com/watch?v=ZJE4mW0OjPg)
+* [Vídeo 04: Desafios](https://www.youtube.com/watch?v=-ZBtMzy1AJU)
 
 Neste trabalho, implementamos os seguintes subcircuitos:
-* banco_de_registradores.circ:
-* conversor_32_23.circ:
-* detector_tipo_instrucao.circ:
-* immediate_generator.circ:
-* unidade_controle.circ.circ:
-* unidade_controle_ula.circ:
-* unidade_logica_aritmetica.circ:
-* monociclo.circ:
-* pipeline.circ:
+* banco_de_registradores.circ: circuito que representa o conjunto de registradores do processador;
+* conversor_32_23.circ: como a memória RAM do logisim só é endereçada com 24 bits, não podemos usar os 32 bits da arquitetura. Para converter, modularizamos um pequeno circuito;
+* detector_tipo_instrucao.circ: subcircuito usado na unidade de controle para identificar o tipo da instrução;
+* immediate_generator.circ: circuito que determina o valor imediado da instrução;
+* unidade_controle.circ.circ: figura central do processador, é quem maestra os sinais de controle;
+* unidade_controle_ula.circ: determina qual operação deve ser feita na ULA;
+* unidade_logica_aritmetica.circ: componente que faz os cálculos necessários para a instrução;
+* monociclo.circ: primeiro componente principal. Para construir a pipeline, fizemos a monociclo primeiro;
+* pipeline.circ: componente principal o qual é o objetivo do trabalho.
 
-Implementação as seguintes instruções:
+Implementamos as seguintes instruções:
 * Tipo R: add
 * Tipo I: lw
 * Tipo S: sw
@@ -76,24 +73,23 @@ Veja melhora no arquivo "[instrucoes.txt](https://github.com/tarcidio/trabalho-o
 [GIF]
 
 ## Desafios
-  Via de regra, o trabalho foi a aplicação do que foi muito bem ensinado já em sala de aula. Portanto, os desafios foram pontuais. O primeiro deles foi a utilização da chamada ao sistema para alocação de memória que até então não se tinha usado. O segundo desafio foi separar o código em funções. Este levou mais tempo, pois foi necessário revisitar o código após uma semana e isso fez com que o grupo se esquecesse, mesmo com os devidos comentários, do que cada comando no código fazia. Por fim, o grupo também tentou separar as funções em um arquivo a parte para incluí-lo depois, mas não foi possível, pois o simulador não permite. 
+  Dentre os desafios enfrentados, podemos citar:
+  1. Fazer subcircuitos que não sabiamos como funcionava de fato. O principal exemplo foi o banco de registradores;
+  2. Manipular os fios de forma que todo o circuito fosse o mais didático possível;
+  3. Sincronizar o clock para que resolvesse o problema da dependencia estrutural
 
-faer subcircuios que noa sabiamos (banco de registadores)
-arrastas os fios para que fosse o mais compreensiveis possivel
-corrigir problemas no clock para que resolvesse o problema da dependnecia estrutural (escrita e dps leitura)
+## Pontos de melhoria para os próximos alunos
+
+1. Implementar outras instruçoes da arquitetura;
+2. Implementar técnicas que resolvam melhor o problema de dependência de dados;
+3. Implementar cache
+
+## Quer me ajuda?
+
+Se encontrar erros neste projeto, por favor, faça um pull ou nos chame para conversar! Adoraríamos melhorar este trabalho para os próximos alunos. Se implementar uma melhoria (instruções, forwarding, cache, dentre outras), avise nos! Anexaremos o link do seu trabalho neste git hub.
 
 
-# Pontos de melhoras para os próximos alunos
-
-implementar outras instruçoes
-fazer o forword
-implementar cache
-
-fazer video para desafios explicando um pouco
-
-se encntrar erros ou fizer uma melhoria (implementar outas instruções, forward ou cachae), avise me que anexarei o link do git hub do projeto neste git hub
-
-vamso melhorar oaprendizado de org arq comop
+Vamos melhorar o aprendizado desta disciplina ;)
 
 ---
 
