@@ -26,12 +26,38 @@
  3. Clique em "DOWNLOAD"
  4. Em segundos, o arquivo .exe do Logsim será baixado
  5. Vá até a pasta de "Downloads" e abra o arquivo baixado
+
+## Discussão e resultados
+
+video:
+explicar o que são os arquivos
+como abrir
+como olhar os subcircuitos
+como carregar dados e instruções
+como fazer o clock funcionar para que as isntruções sejam acessadas
+explicar o detalhe da incrementacao do contador
+
+explicar que inicialmente fizemos os subcircuitos e explicar cda um deles resumidadmente para fazer o monociclo e então deposi fazer os pipeline colocando os registradores intermediarios
+explicar inicialmente que o circuito está no arquivos pipiline.circ
+explicar cada um dos compoenentes
+explicar quais instruções foram implementadas
+explicar qual codigo está no arquivo memoria instrucoes
+explicar que fizemos u mjvideo simples
+mostrar um gifizinho funcionando
   
 ## Desafios
   Via de regra, o trabalho foi a aplicação do que foi muito bem ensinado já em sala de aula. Portanto, os desafios foram pontuais. O primeiro deles foi a utilização da chamada ao sistema para alocação de memória que até então não se tinha usado. O segundo desafio foi separar o código em funções. Este levou mais tempo, pois foi necessário revisitar o código após uma semana e isso fez com que o grupo se esquecesse, mesmo com os devidos comentários, do que cada comando no código fazia. Por fim, o grupo também tentou separar as funções em um arquivo a parte para incluí-lo depois, mas não foi possível, pois o simulador não permite. 
 
+faer subcircuios que noa sabiamos (banco de registadores)
+arrastas os fios para que fosse o mais compreensiveis possivel
+corrigir problemas no clock para que resolvesse o problema da dependnecia estrutural (escrita e dps leitura)
+
+
 # Pontos de melhoras para os próximos alunos
-  
+
+implementar outras instruçoes
+fazer o forword
+implementar cache
 
 ---
 
