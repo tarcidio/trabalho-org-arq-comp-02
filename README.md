@@ -9,7 +9,7 @@
 
 ## Introdução
 
-  A disciplina de Organização e Arquitetura de Computadores é crucial para estudantes e profissionais de tecnologia da informação. Ela oferece uma compreensão sólida do funcionamento interno dos computadores e seus componentes, sendo fundamental para o desenvolvimento de softwares e hardwares eficientes capazes de executar operações complexas de forma rápida e precisa. Além disso, o estudo dessa disciplina também ajuda a solucionar problemas em sistemas computacionais, identificando falhas de desempenho e segurança e encontrando soluções apropriadas.
+  A disciplina de Organização e Arquitetura de Computadores é crucial para profissionais de tecnologia da informação. Ela oferece uma compreensão sólida do funcionamento interno dos computadores e seus componentes, sendo fundamental para o desenvolvimento de softwares e hardwares eficientes. Além disso, o estudo dessa disciplina ajuda a solucionar problemas em sistemas computacionais, identificando falhas de desempenho e segurança e encontrando soluções apropriadas.
 
 ## Objetivo do trabalho
   
