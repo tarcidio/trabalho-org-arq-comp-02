@@ -59,6 +59,12 @@ implementar outras instruçoes
 fazer o forword
 implementar cache
 
+fazer video para desafios explicando um pouco
+
+se encntrar erros ou fizer uma melhoria (implementar outas instruções, forward ou cachae), avise me que anexarei o link do git hub do projeto neste git hub
+
+vamso melhorar oaprendizado de org arq comop
+
 ---
 
 <sup>Instituto de Ciências Matemáticas e de Computação (ICMC) - Universidade de São Paulo (USP)</sup>
