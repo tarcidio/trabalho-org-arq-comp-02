@@ -30,7 +30,10 @@
 
 ## Discussão e resultados
 
-Vídeo 01: Introdução ao Logisim
+
+[Vídeo 01: Introdução ao Logisim]([(https://www.youtube.com/watch?v=ZZsND2eOAwo))
+Descrição: Neste vídeo, explicamos sobre como baixar o projeto e como usar o Logisim.
+
 Vídeo 02: Subcircuitos usados
 Vídeo 03: Explicação da implementação
 Vídeo 04: Desafios
