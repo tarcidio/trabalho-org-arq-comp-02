@@ -94,7 +94,7 @@ Veja melhor no arquivo "[instrucoes.txt](https://github.com/tarcidio/trabalho-or
 2. Implementar técnicas que resolvam melhor o problema de dependência de dados;
 3. Implementar cache
 
-## Quer me ajuda?
+## Quer nos ajudar?
 
 Se encontrar erros neste projeto, por favor, faça um pull ou nos chame para conversar! Adoraríamos melhorar este trabalho para os próximos alunos. Se implementar uma melhoria (instruções, forwarding, cache, dentre outras), avise nos! Anexaremos o link do seu trabalho neste git hub.
 
