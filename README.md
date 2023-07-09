@@ -13,23 +13,24 @@
 
 ## Objetivo do trabalho
   
-<t>O objetivo deste trabalho é implementar e simular um processador RISC-V em pipeline usando o Logisim. A técnica de pipeline é empregada para otimizar o desempenho do processador, dividindo as instruções em estágios e executando-os simultaneamente. Compreender o funcionamento do pipeline e seus componentes básicos é fundamental para compreender a arquitetura de um computador.
+O objetivo deste trabalho é implementar e simular um processador RISC-V em pipeline usando o Logisim. A técnica de pipeline é empregada para otimizar o desempenho do processador, dividindo as instruções em estágios e executando-os simultaneamente. Compreender o funcionamento do pipeline e seus componentes básicos é fundamental para compreender a arquitetura de um computador.
 
 Além da implementação, serão realizados testes utilizando instruções básicas para verificar a funcionalidade do processador simulado. O trabalho também busca ser um recurso educativo, fornecendo material para os futuros alunos da disciplina de Organização e Arquitetura de Computadores.
   
 ## Ferramentas
 
-  Para elaboração, utilizou-se o simulador gratuito Logisim-ITA: ferramenta de simulação de circuitos digitais utilizada para projetar e testar a lógica digital. Ele permite a criação de circuitos combinacionais e sequenciais usando uma interface gráfica intuitiva, o que o torna uma opção popular para estudantes, educadores e entusiastas da eletrônica digital. Tal ferramenta possui uma vasta biblioteca de componentes lógicos (desde portas lógicas, passando por flip flops, até registradores e memória RAM) os quais podem ser utilizados "arrastando e soltando". Por fim, Logisim é útil também por conta da sua capacidade de simular circuitos e compactá-los de forma a modularizá-los, criando subcircuitos reutilizáveis, facilitando a construção de circuitos mais complexos.
+Foi utilizado o simulador Logisim-ITA, uma ferramenta gratuita de simulação de circuitos digitais. Ele possui uma interface gráfica intuitiva que permite a criação e teste de circuitos combinacionais e sequenciais. O Logisim-ITA é popular entre estudantes, educadores e entusiastas da eletrônica digital devido à sua facilidade de uso. Possui uma ampla biblioteca de componentes lógicos, como portas, flip-flops e registradores, que podem ser arrastados e soltos na interface. Além disso, o Logisim-ITA oferece recursos de simulação e modularização, permitindo a criação de subcircuitos reutilizáveis para facilitar a construção de circuitos mais complexos.
   Para usar o Logsim, siga as instruções abaixo:
  1. Acesse o site https://logisim.altervista.org/
  2. Role até o fim da página
  3. Clique em "DOWNLOAD"
  4. Em segundos, o arquivo .exe do Logsim será baixado
  5. Vá até a pasta de "Downloads" e abra o arquivo baixado
-    Também foi usado como base o livro "GUIA PRÁTICO RISC-V: ATLAS DE UMA ARQUITETURA ABERTA" (complementar um pouco)
-
+    Também foi usado como base o livro "GUIA PRÁTICO RISC-V: ATLAS DE UMA ARQUITETURA ABERTA": livro abrangente que explora a arquitetura RISC-V de forma prática. Ele apresenta os conceitos fundamentais e a implementação dessa arquitetura de processador aberta. Exploramos principalmente a página 17 e 18, onde consta as instruções.
+    
 ## Discussão e resultados
 
+Para facilitar a discussão de todo o trabalho, fizemos vídeos que descrevem melhor os componentes e a implementação. Segue:
 
 [Vídeo 01: Introdução ao Logisim](https://www.youtube.com/watch?v=ZZsND2eOAwo)
 
@@ -39,23 +40,29 @@ Além da implementação, serão realizados testes utilizando instruções bási
 
 [Vídeo 04: Desafios](https://www.youtube.com/watch?v=-ZBtMzy1AJU)
 
+Neste trabalho, implementamos os seguintes subcircuitos:
+* banco_de_registradores.circ:
+* conversor_32_23.circ:
+* detector_tipo_instrucao.circ:
+* immediate_generator.circ:
+* unidade_controle.circ.circ:
+* unidade_controle_ula.circ:
+* unidade_logica_aritmetica.circ:
+* monociclo.circ:
+* pipeline.circ:
 
-video:
-explicar o que são os arquivos
-como abrir
-como olhar os subcircuitos
-como carregar dados e instruções
-como fazer o clock funcionar para que as isntruções sejam acessadas
-explicar o detalhe da incrementacao do contador
-
-explicar que inicialmente fizemos os subcircuitos e explicar cda um deles resumidadmente para fazer o monociclo e então deposi fazer os pipeline colocando os registradores intermediarios
-explicar inicialmente que o circuito está no arquivos pipiline.circ
-explicar cada um dos compoenentes
-explicar quais instruções foram implementadas
-explicar qual codigo está no arquivo memoria instrucoes
-explicar que fizemos u mjvideo simples
-mostrar um gifizinho funcionando
+Implementação as seguintes instruções:
+* Tipo R: add
+* Tipo I: lw
+* Tipo S: sw
+* Tipo B: beq
+* Tipo J: jal
   
+O código que está no "MEMORIA_INSTRUCOES" é:
+
+
+[GIF]
+
 ## Desafios
   Via de regra, o trabalho foi a aplicação do que foi muito bem ensinado já em sala de aula. Portanto, os desafios foram pontuais. O primeiro deles foi a utilização da chamada ao sistema para alocação de memória que até então não se tinha usado. O segundo desafio foi separar o código em funções. Este levou mais tempo, pois foi necessário revisitar o código após uma semana e isso fez com que o grupo se esquecesse, mesmo com os devidos comentários, do que cada comando no código fazia. Por fim, o grupo também tentou separar as funções em um arquivo a parte para incluí-lo depois, mas não foi possível, pois o simulador não permite. 
 
