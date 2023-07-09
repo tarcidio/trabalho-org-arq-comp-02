@@ -13,7 +13,7 @@
 
 ## Objetivo do trabalho
   
-<br>O objetivo deste trabalho é implementar e simular um processador RISC-V em pipeline usando o Logisim. A técnica de pipeline é empregada para otimizar o desempenho do processador, dividindo as instruções em estágios e executando-os simultaneamente. Compreender o funcionamento do pipeline e seus componentes básicos é fundamental para compreender a arquitetura de um computador.
+<t>O objetivo deste trabalho é implementar e simular um processador RISC-V em pipeline usando o Logisim. A técnica de pipeline é empregada para otimizar o desempenho do processador, dividindo as instruções em estágios e executando-os simultaneamente. Compreender o funcionamento do pipeline e seus componentes básicos é fundamental para compreender a arquitetura de um computador.
 
 Além da implementação, serão realizados testes utilizando instruções básicas para verificar a funcionalidade do processador simulado. O trabalho também busca ser um recurso educativo, fornecendo material para os futuros alunos da disciplina de Organização e Arquitetura de Computadores.
   
