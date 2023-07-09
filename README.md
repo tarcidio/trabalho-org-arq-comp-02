@@ -35,7 +35,7 @@
 
 Descrição: Neste vídeo, explicamos sobre como baixar o projeto e como usar o Logisim.
 
-[Vídeo 02: Subcircuitos usados]([URL]https://www.youtube.com/watch?v=1rVrc5WXauU)
+[Vídeo 02: Subcircuitos usados](https://www.youtube.com/watch?v=1rVrc5WXauU)
 
 Descrição: Neste vídeo, explico sobre os subcircuitos usados no projeto.
 
@@ -44,6 +44,7 @@ Descrição: Neste vídeo, explico sobre os subcircuitos usados no projeto.
 Descrição: Neste vídeo, explicamos a implementação e o trabalho de fato
 
 [Vídeo 04: Desafios](https://www.youtube.com/watch?v=-ZBtMzy1AJU)
+
 Descrição: Neste vídeo, damos sugestões de como melhorar o projeto com alguns desafios.
 
 video:
