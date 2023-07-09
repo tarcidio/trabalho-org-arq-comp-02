@@ -31,15 +31,20 @@
 ## Discussão e resultados
 
 
-[Vídeo 01: Introdução ao Logisim]((https://www.youtube.com/watch?v=ZZsND2eOAwo))
+[Vídeo 01: Introdução ao Logisim](https://www.youtube.com/watch?v=ZZsND2eOAwo)
+
 Descrição: Neste vídeo, explicamos sobre como baixar o projeto e como usar o Logisim.
 
-
 [Vídeo 02: Subcircuitos usados]([URL]https://www.youtube.com/watch?v=1rVrc5WXauU)
-Descrição:
 
-Vídeo 03: Explicação da implementação
-Vídeo 04: Desafios
+Descrição: Neste vídeo, explico sobre os subcircuitos usados no projeto.
+
+[Vídeo 03: Explicação da implementação](https://www.youtube.com/watch?v=ZJE4mW0OjPg)
+
+Descrição: Neste vídeo, explicamos a implementação e o trabalho de fato
+
+[Vídeo 04: Desafios](https://www.youtube.com/watch?v=-ZBtMzy1AJU)
+Descrição: Neste vídeo, damos sugestões de como melhorar o projeto com alguns desafios.
 
 video:
 explicar o que são os arquivos
