@@ -30,6 +30,11 @@
 
 ## Discussão e resultados
 
+Vídeo 01: Introdução ao Logisim
+Vídeo 02: Subcircuitos usados
+Vídeo 03: Explicação da implementação
+Vídeo 04: Desafios
+
 video:
 explicar o que são os arquivos
 como abrir
