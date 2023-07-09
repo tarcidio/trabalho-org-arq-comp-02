@@ -40,7 +40,7 @@ Para facilitar a discussão de todo o trabalho, fizemos vídeos que descrevem me
 
 Neste trabalho, implementamos os seguintes subcircuitos:
 * banco_de_registradores.circ: circuito que representa o conjunto de registradores do processador;
-* conversor_32_23.circ: como a memória RAM do logisim só é endereçada com 24 bits, não podemos usar os 32 bits da arquitetura. Para converter, modularizamos um pequeno circuito;
+* conversor_32_23.circ: como a memória RAM do Logisim é endereçada com, no máximo, 24 bits, não podemos utilizar os 32 bits da arquitetura. Para converter, modularizamos um pequeno circuito que captura os 24 bits menos significativos;
 * detector_tipo_instrucao.circ: subcircuito usado na unidade de controle para identificar o tipo da instrução;
 * immediate_generator.circ: circuito que determina o valor imediado da instrução;
 * unidade_controle.circ.circ: figura central do processador, é quem maestra os sinais de controle;
