@@ -3,7 +3,7 @@
 ## Autores:
 
 * Tarcídio Antônio Júnior - 10748347 (tarcidio.antonio2@gmail.com)
-* Jade Bortot de Paiva - 11372883
+* Jade Bortot de Paiva - 11372883 (jade_bortot_paiva@usp.br)
 * Gabriel Barbosa de Oliveira - 12543415
 * Luís Filipe Vasconcelos Peres - 10310641
 
