@@ -86,7 +86,7 @@ Veja melhor no arquivo "[instrucoes.txt](https://github.com/tarcidio/trabalho-or
 
 ### Funcionamento:
 
-[GIF]
+<img src="pipeline.gif">
 
 ## Desafios
   Dentre os desafios enfrentados, podemos citar:
